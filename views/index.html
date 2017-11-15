@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>File Metadata</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+	<div class="container">
+		<img src="https://avatars0.githubusercontent.com/jaketripp?&s=300" alt="A picture of me (Jake Tripp)">
+		<br/>
+
+		<div class="icons">
+			<a href="http://jaketripp.com" target="_blank"><i class="address card outline icon"></i></a>
+			<a href="https://github.com/jaketripp" target="_blank"><i class="github icon"></i></a>
+			<a href="https://www.linkedin.com/in/jake-tripp/" target="_blank"><i class="linkedin icon"></i></a>
+			<a href="https://medium.com/@jaketripp" target="_blank"><i class="medium icon"></i></a>
+		</div>
+
+
+		<h1>FreeCodeCamp API Project #5: File Metadata</h1>
+
+		<blockquote>
+			<p>User stories:</p>
+			<ul>
+				<li>I can submit a FormData object that includes a file upload.</li>
+				<li>When I submit something, I will receive the file size in bytes within the JSON response</li>
+			</ul>
+		</blockquote>
+
+		<h3>Submit a file to view its filesize</h3>
+
+		<form class="ui form" action="/get-file-size" method="post">
+			<input type="file" name="file">
+			<input type="submit" class="ui primary button">
+		</form>		
+		
+	</div>
+
+</body>
+
+</html>
