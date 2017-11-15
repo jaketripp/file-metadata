@@ -1,17 +1,18 @@
 const express = require('express');
-// const bodyParser = require('body-parser');
-// const request = require('request');
+const multer  = require('multer');
 
 const app = express();
+const upload = multer();
 
 app.use(express.static(__dirname + '/views'));
 app.use(express.static(__dirname + '/public'));
 
-// app.use(bodyParser.json());
-
-
 app.get('/', (req, res) => {
 	res.render('index.html');
+});
+
+app.post('/get-file-size', upload.single('file'), function (req, res, next) {
+	res.send({size: req.file.size});
 });
 
 // app.get('/imgsearch/:search', (req, res) => {
